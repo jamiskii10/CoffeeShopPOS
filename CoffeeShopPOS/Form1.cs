@@ -41,7 +41,7 @@ namespace CoffeeShopPOS
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
+                string query = "SELECT UserID, Email FROM Users WHERE Email = @Email AND Password = @Password";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Email", email);
                 cmd.Parameters.AddWithValue("@Password", password);
@@ -50,8 +50,10 @@ namespace CoffeeShopPOS
 
                 if (reader.Read())
                 {
+                    int userID = Convert.ToInt32(reader["UserID"]);
+                    loggedInUser = reader["UserID"].ToString();
                     MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Dashboard dash = new Dashboard(loggedInUser);
+                    Dashboard dash = new Dashboard(loggedInUser, userID);
                     dash.Show();
                     this.Hide();
                 }

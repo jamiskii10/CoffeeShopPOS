@@ -30,7 +30,6 @@
         {
             this.backBTN = new System.Windows.Forms.Button();
             this.menuDGV = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.deleteBTN = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.addBTN = new System.Windows.Forms.Button();
@@ -49,7 +48,7 @@
             this.backBTN.Name = "backBTN";
             this.backBTN.Size = new System.Drawing.Size(153, 53);
             this.backBTN.TabIndex = 11;
-            this.backBTN.Text = "BACK";
+            this.backBTN.Text = "RETURN";
             this.backBTN.UseVisualStyleBackColor = true;
             this.backBTN.Click += new System.EventHandler(this.backBTN_Click);
             // 
@@ -62,16 +61,6 @@
             this.menuDGV.RowTemplate.Height = 24;
             this.menuDGV.Size = new System.Drawing.Size(1099, 687);
             this.menuDGV.TabIndex = 10;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(967, 973);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(153, 48);
-            this.btnRefresh.TabIndex = 19;
-            this.btnRefresh.Text = "RESFRESH";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.clearBTN_Click);
             // 
             // deleteBTN
             // 
@@ -158,11 +147,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 1055);
+            this.ClientSize = new System.Drawing.Size(1150, 968);
             this.Controls.Add(this.lblcategory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.deleteBTN);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addBTN);
@@ -172,7 +160,7 @@
             this.Controls.Add(this.backBTN);
             this.Controls.Add(this.menuDGV);
             this.Name = "MenuManagementt";
-            this.Text = "REFRESH";
+            this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.MenuManagementt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.menuDGV)).EndInit();
             this.ResumeLayout(false);
@@ -184,7 +172,6 @@
 
         private System.Windows.Forms.Button backBTN;
         private System.Windows.Forms.DataGridView menuDGV;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button deleteBTN;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button addBTN;

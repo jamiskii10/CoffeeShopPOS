@@ -40,6 +40,7 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.orderDGV = new System.Windows.Forms.DataGridView();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.menuDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDGV)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             // comboCustomer
             // 
             this.comboCustomer.FormattingEnabled = true;
-            this.comboCustomer.Location = new System.Drawing.Point(859, 23);
+            this.comboCustomer.Location = new System.Drawing.Point(874, 34);
             this.comboCustomer.Name = "comboCustomer";
             this.comboCustomer.Size = new System.Drawing.Size(331, 24);
             this.comboCustomer.TabIndex = 0;
@@ -66,7 +67,7 @@
             // 
             this.quantityTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.quantityTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityTB.Location = new System.Drawing.Point(25, 725);
+            this.quantityTB.Location = new System.Drawing.Point(34, 725);
             this.quantityTB.Name = "quantityTB";
             this.quantityTB.Size = new System.Drawing.Size(106, 30);
             this.quantityTB.TabIndex = 2;
@@ -77,7 +78,7 @@
             this.lblTotal.Depth = 0;
             this.lblTotal.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTotal.Location = new System.Drawing.Point(1133, 695);
+            this.lblTotal.Location = new System.Drawing.Point(1207, 686);
             this.lblTotal.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(101, 24);
@@ -96,7 +97,7 @@
             // 
             // btnAddToOrder
             // 
-            this.btnAddToOrder.Location = new System.Drawing.Point(25, 772);
+            this.btnAddToOrder.Location = new System.Drawing.Point(34, 774);
             this.btnAddToOrder.Name = "btnAddToOrder";
             this.btnAddToOrder.Size = new System.Drawing.Size(179, 40);
             this.btnAddToOrder.TabIndex = 5;
@@ -129,12 +130,15 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.DarkGray;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(157, 30);
+            this.btnBack.Size = new System.Drawing.Size(128, 46);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "RETURN";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // materialLabel1
@@ -156,7 +160,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(21, 686);
+            this.materialLabel2.Location = new System.Drawing.Point(30, 686);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(84, 24);
@@ -175,11 +179,25 @@
             this.orderDGV.TabIndex = 12;
             this.orderDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderDGV_CellContentClick);
             // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(998, 139);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(145, 24);
+            this.materialLabel3.TabIndex = 13;
+            this.materialLabel3.Text = "BOUGHT ITEMS";
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1448, 895);
+            this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.orderDGV);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
@@ -193,7 +211,7 @@
             this.Controls.Add(this.menuDGV);
             this.Controls.Add(this.comboCustomer);
             this.Name = "OrderForm";
-            this.Text = "CLEAR";
+            this.Text = "Order Products";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.menuDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDGV)).EndInit();
@@ -216,5 +234,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.DataGridView orderDGV;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
     }
 }
